@@ -363,6 +363,25 @@
             });
         }
 
+        // .........Copy.........
+ 
+        let allCpyBtns = document.querySelectorAll(".copy-btn");
+
+        for(let copyBtn of allCpyBtns){
+            copyBtn.addEventListener("click", function(){
+                let card = copyBtn.closest(".card");
+                let serviceName = card.querySelector("h3").innerText;
+                let serviceNumber = card.querySelector("p.font-bold").innerText;
+
+                navigator.clipboard.writeText(serviceNumber);
+                alert("Copied: " + serviceName + " (" + serviceNumber + ")");
+
+                copyCount = copyCount+1;
+                document.getElementById("copyCount").innerText=copyCount;
+            });
+        }
+
+       
 
     </script>
 </body>
