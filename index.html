@@ -381,7 +381,11 @@
             });
         }
 
-       
+        // .....  clear .....
+        let clearBtn = document.querySelector("#clear-btn");
+        clearBtn.addEventListener("click",function(){
+            callHistoryList.innerHTML = "";
+        });
 
     </script>
 </body>
